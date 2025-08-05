@@ -5,9 +5,9 @@
 }
 
 body {
-	background-color: white;
+	background-color: #171717;
 	font-family: 'Montserrat', Arial, sans-serif;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 ul,
 ol,
