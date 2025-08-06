@@ -23,12 +23,31 @@ function startTimer() {
 setInterval(startTimer, 1000);
 
 function openModal() {
+	console.log(1);
+
 	document.getElementById('modal').style.display = 'block';
+	document.getElementById('modalOverlay').style.display = 'block';
 }
 
 function closeModal() {
 	document.getElementById('modal').style.display = 'none';
+	document.getElementById('modalOverlay').style.display = 'none';
 }
+
+// Overlay ustida bosilsa modalni yopish
+document.getElementById('modalOverlay').addEventListener('click', function (e) {
+	// Faqat modal tashqarisiga bosilgan bo‘lsa
+	if (e.target === this) {
+		closeModal();
+	}
+});
+
+// ESC tugmasi bosilsa modalni yopish
+document.addEventListener('keydown', function (e) {
+	if (e.key === 'Escape') {
+		closeModal();
+	}
+});
 
 function submitForm(event) {
 	event.preventDefault();
