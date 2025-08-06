@@ -43,7 +43,7 @@
 						</ul>
 					</div>
 					<div class="strateg__info-flex">
-						<button class="strateg__info-btn1">>>> Ro’yxatdan o’tish <<<</button>
+						<button class="strateg__info-btn1" onclick="openModal()">>>> Ro’yxatdan o’tish <<<</button>
 						<button class="strateg__info-flex-btn2">00:00</button>
 						<button class="strateg__info-flex-btn3">00:00</button>
 					</div>
@@ -54,6 +54,158 @@
 					<div class="bg-red"></div>
 				</div>
 				<div class="gradient"></div>
+			</div>
+			<div class="modal container" id="modal" style="display: none">
+				<div class="modal__top">
+					<button class="modal__x" onclick="closeModal()">x</button>
+				</div>
+				<div class="modal__title-div">
+					<h2 class="modal__title">
+						MASTERKLASSGA <br />
+						RO'YXATDAN O'TISH
+					</h2>
+				</div>
+				<form class="modal__form" onsubmit="return submitForm(event)">
+					<div class="modal__row1">
+						<label for="name">Ismingizni kiriting:</label>
+						<input type="text" id="name" />
+						<div id="name-error" style="color: red; font-size: 14px"></div>
+					</div>
+					<div class="modal__row2">
+						<label for="number">Telefon raqamingiz:</label>
+						<div class="modal__row2-wrapper">
+							<div class="demo-container">
+								<div class="country-selector" id="countrySelector">
+									<button type="button" id="countryButton" class="country-button">
+										<span id="selectedCode">+998</span>
+										<svg class="dropdown-arrow" id="dropdownArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+										</svg>
+									</button>
+
+									<div id="countryDropdown" class="country-dropdown">
+										<button type="button" class="country-option selected" data-code="+998" data-name="Uzbekistan">
+											<div class="country-info">
+												<span class="country-flag">🇺🇿</span>
+												<span class="country-name">Uzbekistan</span>
+											</div>
+											<div>
+												<span class="country-code">+998</span>
+												<svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+													<path
+														fill-rule="evenodd"
+														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+														clip-rule="evenodd"></path>
+												</svg>
+											</div>
+										</button>
+
+										<button type="button" class="country-option" data-code="+1" data-name="AQSH">
+											<div class="country-info">
+												<span class="country-flag">🇺🇸</span>
+												<span class="country-name">AQSH</span>
+											</div>
+											<div>
+												<span class="country-code">+1</span>
+												<svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+													<path
+														fill-rule="evenodd"
+														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+														clip-rule="evenodd"></path>
+												</svg>
+											</div>
+										</button>
+
+										<button type="button" class="country-option" data-code="+82" data-name="Janubiy Koreya">
+											<div class="country-info">
+												<span class="country-flag">🇰🇷</span>
+												<span class="country-name">Janubiy Koreya</span>
+											</div>
+											<div>
+												<span class="country-code">+82</span>
+												<svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+													<path
+														fill-rule="evenodd"
+														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+														clip-rule="evenodd"></path>
+												</svg>
+											</div>
+										</button>
+
+										<button type="button" class="country-option" data-code="+996" data-name="Qirg'iziston">
+											<div class="country-info">
+												<span class="country-flag">🇰🇬</span>
+												<span class="country-name">Qirg'iziston</span>
+											</div>
+											<div>
+												<span class="country-code">+996</span>
+												<svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+													<path
+														fill-rule="evenodd"
+														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+														clip-rule="evenodd"></path>
+												</svg>
+											</div>
+										</button>
+
+										<button type="button" class="country-option" data-code="+7" data-name="Qozog'iston">
+											<div class="country-info">
+												<span class="country-flag">🇰🇿</span>
+												<span class="country-name">Qozog'iston</span>
+											</div>
+											<div>
+												<span class="country-code">+7</span>
+												<svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+													<path
+														fill-rule="evenodd"
+														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+														clip-rule="evenodd"></path>
+												</svg>
+											</div>
+										</button>
+
+										<button type="button" class="country-option" data-code="+90" data-name="Turkiya">
+											<div class="country-info">
+												<span class="country-flag">🇹🇷</span>
+												<span class="country-name">Turkiya</span>
+											</div>
+											<div>
+												<span class="country-code">+90</span>
+												<svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+													<path
+														fill-rule="evenodd"
+														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+														clip-rule="evenodd"></path>
+												</svg>
+											</div>
+										</button>
+
+										<button type="button" class="country-option" data-code="+44" data-name="Angliya">
+											<div class="country-info">
+												<span class="country-flag">🇬🇧</span>
+												<span class="country-name">Angliya</span>
+											</div>
+											<div>
+												<span class="country-code">+44</span>
+												<svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+													<path
+														fill-rule="evenodd"
+														d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+														clip-rule="evenodd"></path>
+												</svg>
+											</div>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<input type="text" id="number" placeholder="88 888 88 88" />
+						</div>
+						<div id="number-error" style="color: red; font-size: 14px"></div>
+					</div>
+
+					<button type="submit" class="modal__btn">RO'YXATDAN O'TISH</button>
+				</form>
 			</div>
 		</section>
 		<!-- JS -->
