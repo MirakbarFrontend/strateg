@@ -168,7 +168,7 @@ a {
 .bg-red {
 	max-width: 481px;
 	width: 100%;
-	height: 559px;
+	height: 597px;
 	background-color: #d50606;
 	border-radius: 1000px;
 	opacity: 0.6;
@@ -613,6 +613,7 @@ a {
 		display: block;
 		padding: 8px;
 		max-width: 131px;
+		margin-bottom: 10px;
 	}
 	.strateg__info-text {
 		font-size: 14px;
@@ -672,7 +673,7 @@ a {
 		color: #d40606;
 	}
 	.strateg__info-wrapper {
-		padding: 3px 11px;
+		padding: 3px 11px 3px 25px;
 		max-width: 321px;
 		margin-bottom: 48px;
 	}
@@ -890,11 +891,16 @@ a {
 }
 
 @media screen and (max-width: 375px) {
+	.strateg {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 	.strateg__wrapper-img {
 		position: relative;
-		top: 20px;
+		top: -50px;
 		right: -30px;
 		width: 194px;
+		height: 270px;
 		object-fit: contain;
 		object-position: top;
 		margin-left: auto;
@@ -903,12 +909,41 @@ a {
 	}
 
 	.bg-red {
-		width: 184px;
-		height: 261px;
-		top: 40px;
-		right: -18%;
+		width: 174px;
+		height: 201px;
+		top: 30px;
+		right: -17%;
 		opacity: 0.7;
 		background-color: #d50606;
 		box-shadow: 0px 4px 60px 0px #cb0000;
+	}
+	.strateg__info-middle-list-item {
+		font-size: 10px;
+	}
+	.strateg__info-title {
+		font-size: 18px;
+	}
+	.strateg__info-btn1 {
+		max-width: 300px;
+		font-size: 16px;
+	}
+	.strateg__info-wrapper {
+		background-color: #9c0b0b;
+		padding: 3px 11px 3px 20px;
+	}
+	.strateg__info-wrapper-text {
+		font-size: 12px;
+		line-height: 1.4;
+		max-width: 220px;
+	}
+	.strateg__info-flex-btn3 {
+		font-size: 24px;
+		max-width: 101px;
+	}
+	.max1 {
+		max-width: 180px;
+	}
+	.max3 {
+		max-width: 110px;
 	}
 }
